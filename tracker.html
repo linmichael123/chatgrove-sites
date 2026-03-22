@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMB Forge — Lead Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 0.25rem; }
+    .subtitle { color: #64748b; font-size: 0.875rem; margin-bottom: 2rem; }
+    .stats-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card {
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.25rem;
+    }
+    .stat-card .value { font-size: 2rem; font-weight: 900; color: #475569; }
+    .stat-card .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-top: 0.25rem; }
+    .section-title { font-size: 1rem; font-weight: 700; margin: 2rem 0 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .badge { background: #e2e8f0; color: #475569; padding: 0.125rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e2e8f0; border-radius: 0.75rem; overflow: hidden; }
+    th { text-align: left; padding: 0.75rem 1rem; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; font-weight: 600; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+    td { padding: 0.75rem 1rem; font-size: 0.875rem; border-bottom: 1px solid #f1f5f9; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover { background: #f8fafc; }
+    @media (max-width: 768px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      table { font-size: 0.8125rem; }
+      td, th { padding: 0.5rem 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SMB Forge — Lead Tracker</h1>
+    <p class="subtitle">Saturday, March 21, 2026</p>
+
+    <div class="stats-row">
+      <div class="stat-card"><div class="value">112</div><div class="label">Total Leads</div></div>
+      <div class="stat-card"><div class="value">0</div><div class="label">Emails Sent</div></div>
+      <div class="stat-card"><div class="value">13</div><div class="label">SMS Sent</div></div>
+      <div class="stat-card"><div class="value">0</div><div class="label">Replied</div></div>
+      <div class="stat-card"><div class="value">0</div><div class="label">Bounced</div></div>
+    </div>
+
+    
+    <div class="section-title">Contacted <span class="badge">13</span></div>
+    <table>
+      <thead><tr><th>Business</th><th>Contact</th><th>Channel</th><th>Step</th><th>Last Sent</th><th>Status</th><th>Site</th></tr></thead>
+      <tbody><tr>
+      <td>Estetica Erika's</td>
+      <td>(714) 558-1020</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/estetica-erika-s/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>B&A Barbershop - Haircut Santa Ana CA</td>
+      <td>(714) 486-1017</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/b-a-barbershop-haircut-santa-ana-ca/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Blessed Up Barbershop Santa Ana</td>
+      <td>(714) 884-3645</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/blessed-up-barbershop-santa-ana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Rubios Barber Shop</td>
+      <td>(714) 376-8318</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/rubios-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Faded Barber Shop Santa Ana</td>
+      <td>(714) 668-9750</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/faded-barber-shop-santa-ana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>The BarberStop</td>
+      <td>(714) 931-0093</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/the-barberstop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>First Barber</td>
+      <td>(714) 623-2379</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/first-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Melanie's Beauty Salon</td>
+      <td>(714) 884-3393</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/melanie-s-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Prime Time Barber Shop</td>
+      <td>(657) 247-4903</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/prime-time-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Tease Salon</td>
+      <td>(949) 548-3273</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/tease-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>BARBERING BY JOSE</td>
+      <td>(714) 580-1450</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/barbering-by-jose/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Wendys Beauty Salon</td>
+      <td>(714) 558-4897</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/wendys-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr>
+<tr>
+      <td>Great Clips</td>
+      <td>(714) 434-8121</td>
+      <td>📱 SMS</td>
+      <td>Step 1</td>
+      <td>Mar 21</td>
+      <td><span style="background:#3b82f615;color:#3b82f6;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">sms_1</span></td>
+      <td><a href="https://smbforge.netlify.app/great-clips/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td>
+    </tr></tbody>
+    </table>
+
+    
+    <div class="section-title">Pending Email <span class="badge">29</span></div>
+    <table>
+      <thead><tr><th>Business</th><th>Contact</th><th>Channel</th><th>Step</th><th>Last Sent</th><th>Status</th><th>Site</th></tr></thead>
+      <tbody><tr><td>Suavecito Pomade</td><td>info@suavecito.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/suavecito-pomade/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Good Fellaz Barber Shop, Santa Ana</td><td>goodfellazbs@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/good-fellaz-barber-shop-santa-ana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>American Barbershop</td><td>info@americanbarbershop.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/american-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>crook + co Hair Salon</td><td>user@domain.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/crook-co-hair-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Hair Studio</td><td>beauty.skinbyness@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/hair-studio/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Oc’s Finest Barber Shop</td><td>hi@mystore.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/oc-s-finest-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Golden Vision Barbershop</td><td>info.us@booksy.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/golden-vision-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>South Coast Barber Shop</td><td>info.us@booksy.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/south-coast-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Elite Beauty Salon</td><td>hi@mystore.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/elite-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>El Catrin BarberShop</td><td>elcatrinbarbershop@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/el-catrin-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Tina's Beauty Salon & Supply</td><td>info@mysite.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/tina-s-beauty-salon-supply/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Victoria's Beauty Salon</td><td>info@victorias1.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/victoria-s-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Royale Barbershop</td><td>rickiereyes11@yahoo.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/royale-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Blends Barbershop OC</td><td>micah@micahrich.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/blends-barbershop-oc/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>One to One Salon</td><td>lemonad@jovanny.ru</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/one-to-one-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Colibri Hair Salon by Tatiana</td><td>tanyabel73@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/colibri-hair-salon-by-tatiana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Phenix Salon Suites - Santa Ana</td><td>info@coolscalp.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/phenix-salon-suites-santa-ana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>AZ Hair Lounge</td><td>info@AZhairlounge.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/az-hair-lounge/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Sola Salons</td><td>renu.agnihotri@solasalonstudios.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/sola-salons/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>e2beauty salon + headspa</td><td>info@e2beauty.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/e2beauty-salon-headspa/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Gilly's Barber Shop</td><td>user@domain.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/gilly-s-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Shop</td><td>info@theshop-santaana.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Angie Hairr Stylist</td><td>angie@angiehairr.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/angie-hairr-stylist/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>running with scissors hair studio</td><td>raysamano@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/running-with-scissors-hair-studio/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Brewers Barber</td><td>impallari@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/brewers-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Phenix Salon Suites</td><td>info@kellytran.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/phenix-salon-suites/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Linda Vista Barbershop</td><td>user@domain.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/linda-vista-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Salon Zero</td><td>salonzeroorangecounty@gmail.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/salon-zero/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>El Mentado Barbershop</td><td>info.us@booksy.com</td><td>📧 Email</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/el-mentado-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr></tbody>
+    </table>
+
+    
+    <div class="section-title">Pending SMS <span class="badge">70</span></div>
+    <table>
+      <thead><tr><th>Business</th><th>Contact</th><th>Channel</th><th>Step</th><th>Last Sent</th><th>Status</th><th>Site</th></tr></thead>
+      <tbody><tr><td>Tony's Barber Center</td><td>(714) 260-1248</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/tony-s-barber-center/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Gigis Salon</td><td>(714) 543-1557</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/gigis-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Muñoz Barbershop And Hairsalon</td><td>(714) 844-3976</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/mu-oz-barbershop-and-hairsalon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Yes To Beauty by Yesenia</td><td>(714) 785-6560</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/yes-to-beauty-by-yesenia/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Young American Salon - Southern Local</td><td>(714) 838-8076</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-young-american-salon-southern-local/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>BM Barber</td><td>(714) 383-4088</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/bm-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Diva Salon</td><td>(714) 432-7044</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/diva-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>VIP BARBERSHOP</td><td>(714) 586-1540</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/vip-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Michelle Beauty Salon</td><td>(714) 835-4766</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/michelle-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Cielo's Hair Salon and barber</td><td>(714) 852-3103</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/cielo-s-hair-salon-and-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Alkali Salon</td><td>(714) 557-5353</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/alkali-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Main Cave</td><td>(657) 245-3324</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-main-cave/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Great Clips</td><td>(714) 850-1840</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/great-clips/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Cuban Barbershop</td><td>(949) 664-9372</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/cuban-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Mayra's Beauty Salon</td><td>(714) 554-4600</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/mayra-s-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Nova Salon</td><td>(714) 543-2830</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/nova-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>JR’s BarberShop</td><td>(714) 949-7386</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/jr-s-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Colorist Salon</td><td>(714) 839-2800</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-colorist-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Fade & Co. Barber Shop and Shave Parlor</td><td>(714) 617-5822</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/fade-co-barber-shop-and-shave-parlor/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Kings Barber Shop</td><td>(657) 231-6299</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/kings-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Clutch Time Cuts Barber Shop</td><td>(714) 714-0047</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/clutch-time-cuts-barber-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Garduño's Studio Barbershop</td><td>(714) 454-8824</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/gardu-o-s-studio-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Oc Beauty Lounge</td><td>(714) 835-5099</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-oc-beauty-lounge/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Barber by Tony</td><td>(714) 679-9198</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/barber-by-tony/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Frida Beauty Salon</td><td>(714) 972-9877</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/frida-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Elsa's Beauty Shop</td><td>(714) 641-6603</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/elsa-s-beauty-shop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>La Paz Beauty Salon Unisex</td><td>(714) 550-7005</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/la-paz-beauty-salon-unisex/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Mi Jardin Hair Salon</td><td>(714) 547-2269</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/mi-jardin-hair-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Edinger Center Barbers</td><td>(714) 549-1739</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/edinger-center-barbers/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Above All Barbershop</td><td>(657) 775-7531</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/above-all-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Gloss and Glam Beauty Lounge</td><td>(714) 308-4686</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/gloss-and-glam-beauty-lounge/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Icons Barbershop</td><td>(714) 559-8233</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/icons-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Almighty Barbershop</td><td>(657) 232-0801</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/almighty-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Legacy barbershop</td><td>(714) 376-8318</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/legacy-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Orlando's Hair Studio</td><td>(714) 541-5961</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/orlando-s-hair-studio/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Adela’s Beauty Salon</td><td>(714) 483-8915</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/adela-s-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Lux Salon</td><td>(714) 966-5265</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/lux-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Sandy's Beauty Salon</td><td>(714) 547-7844</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/sandy-s-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Lucero's Salon</td><td>(657) 527-0069</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/lucero-s-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Salon 29:11 & Suites</td><td>(714) 544-2911</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/salon-29-11-suites/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Glow Up Med Spa</td><td>(949) 932-0334</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/glow-up-med-spa/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>straight Shot Barbers</td><td>(714) 852-3513</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/straight-shot-barbers/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Hairapy</td><td>(714) 341-0924</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/hairapy/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Wave Barbershop</td><td>(657) 777-8929</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-wave-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Rumorz Kutz</td><td>(714) 616-9266</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/rumorz-kutz/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Bella'z Beauty Salon</td><td>(714) 602-7474</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/bella-z-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Impression Beauty Salon</td><td>(714) 542-4273</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/impression-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Nancy Hair Fashion</td><td>(714) 554-0425</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/nancy-hair-fashion/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Cruzers Barbershop</td><td>(657) 698-5636</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/cruzers-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Salon Sycamore</td><td>(657) 231-6100</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/salon-sycamore/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>California Beauty Salon</td><td>(714) 541-3428</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/california-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Unisex Beauty Salon</td><td>(714) 543-0840</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/unisex-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Villa's barber shop and beauty salon</td><td>(714) 727-4970</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/villa-s-barber-shop-and-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>714 Hair Salon</td><td>(714) 558-6899</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/714-hair-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Angie's Hair Salon</td><td>(714) 557-1510</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/angie-s-hair-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Le Reve Beauty</td><td>(310) 982-9497</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/le-reve-beauty/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Loyalty Barber Co Santa Ana</td><td>(657) 210-4110</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/loyalty-barber-co-santa-ana/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>KALM Beauty Lounge & Spa</td><td>(949) 932-0520</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/kalm-beauty-lounge-spa/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Phernando the Barber</td><td>(714) 417-5634</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/phernando-the-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Pulido Barbershop</td><td>(714) 277-6938</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/pulido-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>10-7 Barber</td><td>(714) 805-1431</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/10-7-barber/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>The Fade Lab Barbershop</td><td>(714) 787-9789</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/the-fade-lab-barbershop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Toritoz Bros Barbershop #2</td><td>(714) 884-3705</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/toritoz-bros-barbershop-2/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Bryfadez</td><td>(714) 867-8134</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/bryfadez/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>No Hay Limite Studio | Barber Studio</td><td>(949) 358-8917</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/no-hay-limite-studio-barber-studio/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>BLUE HAIR CHIC Beauty Salon</td><td>(714) 610-0520</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/blue-hair-chic-beauty-salon/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Faded Workshop</td><td>(949) 817-9918</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/faded-workshop/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Luxe Salon & Spa</td><td>(949) 555-0182</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/luxe-salon-spa/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>Bella Cucina Ristorante</td><td>(714) 555-0247</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/bella-cucina-ristorante/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr>
+<tr><td>OC Pro Plumbing & Drain</td><td>(714) 555-0391</td><td>📱 SMS</td><td>—</td><td>—</td><td><span style="background:#94a3b815;color:#94a3b8;padding:0.25rem 0.625rem;border-radius:1rem;font-size:0.75rem;font-weight:600;">generated</span></td><td><a href="https://smbforge.netlify.app/oc-pro-plumbing-drain/" target="_blank" style="color:#3b82f6;text-decoration:none;">View</a></td></tr></tbody>
+    </table>
+  </div>
+</body>
+</html>
