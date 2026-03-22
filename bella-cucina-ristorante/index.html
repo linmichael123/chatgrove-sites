@@ -71,7 +71,7 @@
     /* Hero */
     .hero {
       padding: 7rem 0 5rem;
-      background: linear-gradient(135deg, hsl(28 30% 96%) 0%, hsl(28 20% 98%) 100%);
+      background: linear-gradient(135deg, hsl(var(--primary-h) 30% 96%) 0%, hsl(var(--primary-h) 20% 98%) 100%);
       position: relative; overflow: hidden;
     }
     .hero::before {
@@ -239,7 +239,7 @@
     @media (max-width: 480px) {
       .nav-inner .btn-primary { display: none; }
     }
-    /* Photo gallery responsive — overrides inline grid styles */
+    /* Photo gallery responsive */
     @media (max-width: 640px) {
       .section .container > div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
@@ -325,7 +325,7 @@
   <!-- Photo Gallery -->
   
 
-  <!-- Menu / Services -->
+  <!-- Services -->
   <section id="services" class="section reveal">
     <div class="container">
       <div class="section-header">
@@ -448,7 +448,7 @@
           <div class="footer-heading">Quick Links</div>
           <ul class="footer-links">
             <li><a href="#services">Menu</a></li>
-            <li><a href="#about">Hours &amp; Location</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
