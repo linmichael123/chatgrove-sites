@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbering by Jose | Barber Shop in Santa Ana, CA</title>
+  <meta name="description" content="Top-rated barber shop in Santa Ana, CA. Barbering by Jose offers precision cuts, fades, beard trims & more. 4.9 stars. Visit us at 1935 17th St Suite E.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            blush: { 50: '#fdf2f4', 100: '#fce7eb', 200: '#f9d0d9', 300: '#f4a9ba', 400: '#ed7a96', 500: '#e04d73', 600: '#cc2d5a', 700: '#ab1f49', 800: '#8f1d40', 900: '#781b3b' },
+            gold: { 50: '#fdfbf5', 100: '#f9f0d8', 200: '#f2dfae', 300: '#e9c97c', 400: '#dfaf4d', 500: '#d49a2e', 600: '#be7b22', 700: '#9d5d1e', 800: '#814b20', 900: '#6b3f1e' },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+
+    /* Hero background pattern */
+    .hero-bg {
+      background: linear-gradient(135deg, #fdf2f4 0%, #fce7eb 50%, #f9d0d9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(224,77,115,0.08) 0%, transparent 70%);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,154,46,0.06) 0%, transparent 70%);
+    }
+
+    /* Glassmorphism nav */
+    .nav-glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(224,77,115,0.1);
+    }
+
+    .card-shadow {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    .card-shadow:hover {
+      box-shadow: 0 12px 40px rgba(224,77,115,0.12);
+      transform: translateY(-4px);
+    }
+
+    .cta-btn {
+      background: linear-gradient(135deg, #e04d73 0%, #cc2d5a 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(224,77,115,0.3);
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(224,77,115,0.45);
+    }
+
+    .cta-btn-outline {
+      border: 2px solid #e04d73;
+      color: #e04d73;
+      transition: all 0.3s ease;
+    }
+    .cta-btn-outline:hover {
+      background: #e04d73;
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-fade-up { animation: fadeUp 0.8s ease forwards; }
+    .animate-fade-up-delay { animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
+    .animate-fade-up-delay2 { animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
+    .animate-fade-in { animation: fadeIn 1s ease forwards; }
+
+    /* Decorative line */
+    .accent-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #e04d73, #d49a2e);
+    }
+
+    /* Gallery grid placeholders */
+    .gallery-item {
+      background: linear-gradient(135deg, #fce7eb 0%, #f9d0d9 100%);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      color: #ab1f49;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #f4a9ba, transparent);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Sticky Nav -->
+  <nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-display text-2xl font-bold text-gray-900 tracking-tight">BARBERING BY JOSE</a>
+      <div class="flex items-center gap-6">
+        <a href="#services" class="hidden md:inline text-gray-600 hover:text-blush-600 transition text-sm font-medium">Services</a>
+        <a href="#gallery" class="hidden md:inline text-gray-600 hover:text-blush-600 transition text-sm font-medium">Gallery</a>
+        <a href="#contact" class="hidden md:inline text-gray-600 hover:text-blush-600 transition text-sm font-medium">Contact</a>
+        
+        <a href="tel:(714) 580-1450" class="cta-btn inline-flex items-center text-white px-5 py-2.5 rounded-full text-sm font-semibold">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Book Now
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-bg pt-28 pb-24 md:pt-36 md:pb-32">
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <div class="text-center">
+        <div class="animate-fade-up">
+          <div class="accent-line mx-auto mb-8"></div>
+          <p class="text-blush-500 font-medium tracking-[0.2em] uppercase text-sm mb-4">Welcome to</p>
+          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">Santa Ana's Premier Barbershop for the Modern Gentleman</h1>
+        </div>
+        <div class="animate-fade-up-delay">
+          <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">Barbering by Jose brings precision cuts and classic grooming to the heart of Santa Ana, CA. With a 4.9-star reputation built on 184 satisfied clients, Jose and his team deliver expert craftsmanship in a welcoming, neighborhood atmosphere. Whether you're after a sharp fade or a clean shave, you're in skilled hands.</p>
+        </div>
+        <div class="animate-fade-up-delay2 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="tel:(714) 580-1450" class="cta-btn text-white px-10 py-4 rounded-full text-lg font-semibold">Book your appointment and leave looking your best.</a>
+          <a href="#services" class="cta-btn-outline px-10 py-4 rounded-full text-lg font-semibold">View Services</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Google Rating Badge -->
+  
+  <section class="max-w-4xl mx-auto px-6 -mt-10 relative z-20">
+    <div class="bg-white rounded-2xl card-shadow p-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-center border border-blush-100">
+      <div class="flex flex-col items-center">
+        <div class="flex items-center gap-1 text-yellow-400 text-3xl mb-1">
+          &#9733;&#9733;&#9733;&#9733;&#9734;
+        </div>
+        <div class="text-sm text-gray-500 mt-1">Google Reviews</div>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-gray-200"></div>
+      <div>
+        <span class="text-3xl font-bold text-gray-900">4.9</span>
+        <span class="text-lg text-gray-500 ml-1">out of 5</span>
+        <p class="text-sm text-gray-500 mt-1">Based on <strong class="text-gray-700">184</strong> reviews</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Services -->
+  <section id="services" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-blush-500 font-medium tracking-[0.15em] uppercase text-sm mb-3">What We Offer</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <div class="accent-line mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Haircuts & Fades</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Beard Trims & Shaping</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Hot Towel Straight Razor Shave</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Kids' Haircuts</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Line-Ups & Edge Work</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl card-shadow p-8 border border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Hair Design & Styling</h3>
+        <p class="text-sm text-gray-500">Professional quality service tailored to your needs.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-gray-50 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-blush-500 font-medium tracking-[0.15em] uppercase text-sm mb-3">Our Work</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gallery</h2>
+        <div class="accent-line mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="gallery-item rounded-xl">Styles &amp; Cuts</div>
+        <div class="gallery-item rounded-xl row-span-2 min-h-[420px]">Salon Interior</div>
+        <div class="gallery-item rounded-xl">Color &amp; Highlights</div>
+        <div class="gallery-item rounded-xl">Treatments</div>
+        <div class="gallery-item rounded-xl">Transformations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section id="contact" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-blush-500 font-medium tracking-[0.15em] uppercase text-sm mb-3">Plan Your Visit</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Visit Us</h2>
+        <div class="accent-line mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        
+        <div>
+          <h3 class="font-display text-xl font-semibold text-gray-900 mb-6">Hours</h3>
+          <div class="bg-gray-50 rounded-2xl p-6">
+            <table class="w-full text-left text-sm">
+      <tbody>
+        <tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Monday</td><td class="py-3 text-gray-500 text-right">1:00 – 8:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Tuesday</td><td class="py-3 text-gray-500 text-right">9:00 AM – 8:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Wednesday</td><td class="py-3 text-gray-500 text-right">9:00 AM – 8:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Thursday</td><td class="py-3 text-gray-500 text-right">9:00 AM – 8:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Friday</td><td class="py-3 text-gray-500 text-right">8:00 AM – 8:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Saturday</td><td class="py-3 text-gray-500 text-right">7:00 AM – 5:00 PM</td></tr>
+<tr class="border-b border-gray-100"><td class="py-3 font-semibold text-gray-900">Sunday</td><td class="py-3 text-gray-500 text-right">7:00 AM – 5:00 PM</td></tr>
+      </tbody>
+    </table>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-display text-xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blush-50 flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-blush-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Address</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=1935 17th St Suite E, Santa Ana, CA 92705, USA" target="_blank" rel="noopener" class="text-gray-600 hover:text-blush-600 transition">1935 17th St Suite E, Santa Ana, CA 92705, USA</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blush-50 flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-blush-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-1">Phone</p>
+                <a href="tel:(714) 580-1450" class="text-gray-600 hover:text-blush-600 transition">(714) 580-1450</a>
+              </div>
+            </div>
+            
+          </div>
+          <a href="tel:(714) 580-1450" class="cta-btn inline-block text-white px-8 py-4 rounded-full text-lg font-semibold mt-8">Book Your Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #781b3b 0%, #ab1f49 50%, #e04d73 100%);">
+    <div class="absolute inset-0 opacity-10">
+      <div style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px); background-size: 40px 40px;" class="w-full h-full"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Ready for a Fresh Look?</h2>
+      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto font-light">Book your appointment and leave looking your best.</p>
+      <a href="tel:(714) 580-1450" class="inline-block bg-white text-blush-700 px-10 py-4 rounded-full text-lg font-semibold hover:bg-blush-50 transition shadow-lg hover:shadow-xl">
+        Call (714) 580-1450
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-gray-400 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <h3 class="font-display text-2xl font-bold text-white mb-4">BARBERING BY JOSE</h3>
+          <p class="text-gray-500 leading-relaxed text-sm">Your destination for exceptional beauty services. We look forward to welcoming you.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm tracking-wider uppercase">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#services" class="hover:text-blush-400 transition">Services</a></li>
+            <li><a href="#gallery" class="hover:text-blush-400 transition">Gallery</a></li>
+            <li><a href="#contact" class="hover:text-blush-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm tracking-wider uppercase">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=1935 17th St Suite E, Santa Ana, CA 92705, USA" target="_blank" rel="noopener" class="hover:text-blush-400 transition">1935 17th St Suite E, Santa Ana, CA 92705, USA</a>
+            </li>
+            <li><a href="tel:(714) 580-1450" class="hover:text-blush-400 transition">(714) 580-1450</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-divider mb-8"></div>
+      <p class="text-center text-sm text-gray-600">&copy; 2026 BARBERING BY JOSE. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

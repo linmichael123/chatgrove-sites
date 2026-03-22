@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Up Med Spa | Hair Salon in Santa Ana, CA</title>
+  <meta name="description" content="Glow Up Med Spa in Santa Ana, CA offers expert hair and beauty services. Rated 4.9 stars. Book your appointment today and experience the glow-up you deserve.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-h: 340;
+      --primary-s: 70%;
+      --primary-l: 55%;
+      --primary: hsl(var(--primary-h) var(--primary-s) var(--primary-l));
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: hsl(0 0% 6%);
+      color: hsl(0 0% 95%);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: hsl(0 0% 5%);
+      border-bottom: 1px solid hsl(0 0% 12%);
+      padding: 0.875rem 0;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .nav-logo { font-size: 1.25rem; font-weight: 900; color: hsl(0 0% 95%); letter-spacing: -0.02em; text-decoration: none; }
+    .desktop-nav { display: flex; align-items: center; gap: 2rem; }
+    .desktop-nav a {
+      color: hsl(0 0% 55%); text-decoration: none; font-size: 0.875rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .desktop-nav a:hover { color: hsl(0 0% 95%); }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--primary); color: #fff; padding: 0.625rem 1.25rem;
+      border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600;
+      text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid hsl(0 0% 20%); color: hsl(0 0% 95%); padding: 0.875rem 2rem;
+      border-radius: 0.5rem; font-size: 1rem; font-weight: 600;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s; background: transparent;
+    }
+    .btn-outline:hover { border-color: hsl(0 0% 35%); background: hsl(0 0% 10%); }
+    .btn-primary-lg {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--primary); color: #fff; padding: 0.875rem 2rem;
+      border-radius: 0.5rem; font-size: 1rem; font-weight: 600;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .btn-primary-lg:hover { opacity: 0.9; }
+    .hamburger-btn {
+      display: none; background: none; border: 1px solid hsl(0 0% 20%);
+      color: hsl(0 0% 70%); padding: 0.5rem; border-radius: 0.375rem; cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 7rem 0 5rem;
+      background: linear-gradient(160deg, hsl(0 0% 6%) 0%, hsl(340 15% 10%) 50%, hsl(0 0% 6%) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, hsl(0 0% 12%) 1px, transparent 0);
+      background-size: 32px 32px; opacity: 0.4;
+    }
+    .hero-content { position: relative; z-index: 1; text-align: center; max-width: 800px; margin: 0 auto; }
+    .hero-label {
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: hsl(0 0% 55%); margin-bottom: 1.5rem;
+    }
+    .hero-label span { color: var(--primary); }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -0.03em;
+      line-height: 1.1; margin-bottom: 1.5rem; color: hsl(0 0% 95%);
+    }
+    .hero h1 .accent { color: var(--primary); }
+    .hero-sub { font-size: 1.125rem; color: hsl(0 0% 55%); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .scroll-indicator {
+      margin-top: 3rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: hsl(0 0% 35%); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .scroll-indicator svg { animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+    /* Stats */
+    .stats {
+      border-top: 1px solid hsl(0 0% 12%); border-bottom: 1px solid hsl(0 0% 12%);
+      background: hsl(0 0% 7%); padding: 2.5rem 0;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    }
+    .stat-item {
+      text-align: center; padding: 0.5rem 1rem;
+      border-right: 1px solid hsl(0 0% 12%);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-value { font-size: 2rem; font-weight: 900; color: hsl(0 0% 95%); letter-spacing: -0.02em; }
+    .stat-label { font-size: 0.75rem; color: hsl(0 0% 45%); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+
+    /* Sections */
+    .section { padding: 5rem 0; }
+    .section-label {
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--primary); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .section-label::before {
+      content: ''; width: 2rem; height: 1px; background: var(--primary);
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; letter-spacing: -0.03em;
+      color: hsl(0 0% 95%); margin-bottom: 0.75rem;
+    }
+    .section-subtitle { color: hsl(0 0% 55%); max-width: 500px; font-size: 1rem; }
+    .section-header { margin-bottom: 3rem; }
+
+    /* Services grid */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+    /* Hours section */
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .hours-card {
+      background: hsl(0 0% 9%); border: 1px solid hsl(0 0% 14%); border-radius: 0.75rem; padding: 2rem;
+    }
+    .hours-card h3 {
+      font-size: 1rem; font-weight: 800; color: hsl(0 0% 95%); margin-bottom: 1.5rem;
+    }
+    /* Hours table overrides */
+    .hours-card table { width: 100%; border-collapse: collapse; }
+    .hours-card tr { border-bottom: 1px solid hsl(0 0% 14%); }
+    .hours-card tr:last-child { border-bottom: none; }
+    .hours-card td { padding: 0.75rem 0; font-size: 0.875rem; }
+    .hours-card td:first-child { color: hsl(0 0% 75%); font-weight: 600; }
+    .hours-card td:last-child { color: hsl(0 0% 55%); text-align: right; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-icon {
+      width: 40px; height: 40px; border-radius: 0.5rem; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: hsl(var(--primary-h) var(--primary-s) var(--primary-l) / 0.1);
+      border: 1px solid hsl(var(--primary-h) var(--primary-s) var(--primary-l) / 0.25);
+    }
+    .contact-icon svg { width: 18px; height: 18px; color: var(--primary); }
+    .contact-label { font-size: 0.75rem; color: hsl(0 0% 45%); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.25rem; }
+    .contact-value { color: hsl(0 0% 75%); font-size: 0.9375rem; }
+    .contact-value a { color: hsl(0 0% 75%); text-decoration: none; transition: color 0.2s; }
+    .contact-value a:hover { color: var(--primary); }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 5rem 0; text-align: center;
+      background: hsl(0 0% 7%); border-top: 1px solid hsl(0 0% 12%); border-bottom: 1px solid hsl(0 0% 12%);
+    }
+    .cta-section h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; letter-spacing: -0.03em;
+      color: hsl(0 0% 95%); margin-bottom: 1rem;
+    }
+    .cta-section p { color: hsl(0 0% 55%); margin-bottom: 2rem; font-size: 1.0625rem; }
+
+    /* Footer */
+    footer {
+      background: hsl(0 0% 3%); border-top: 1px solid hsl(0 0% 12%); padding: 4rem 0 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand { font-size: 1.25rem; font-weight: 900; color: hsl(0 0% 95%); margin-bottom: 0.75rem; }
+    .footer-tagline { color: hsl(0 0% 45%); font-size: 0.875rem; line-height: 1.6; }
+    .footer-heading {
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: hsl(0 0% 55%); margin-bottom: 1rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-links a { color: hsl(0 0% 45%); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-divider { height: 1px; background: hsl(0 0% 12%); margin-bottom: 2rem; }
+    .footer-copy { text-align: center; font-size: 0.8125rem; color: hsl(0 0% 35%); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none; flex-direction: column; gap: 0;
+      background: hsl(0 0% 7%); border-bottom: 1px solid hsl(0 0% 12%);
+      padding: 1rem 1.5rem;
+    }
+    .mobile-menu a {
+      color: hsl(0 0% 70%); text-decoration: none; padding: 0.75rem 0;
+      border-bottom: 1px solid hsl(0 0% 12%); font-size: 0.9375rem;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .desktop-nav { display: none; }
+      .hamburger-btn { display: flex !important; }
+      .services-grid { grid-template-columns: 1fr !important; }
+      .stats-grid { grid-template-columns: 1fr 1fr !important; }
+      .stat-item:nth-child(2) { border-right: none; }
+      .hours-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero { padding: 5rem 0 3rem; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">Glow Up Med Spa</a>
+      <div class="desktop-nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      
+      <a href="tel:(949) 932-0334" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        (949) 932-0334
+      </a>
+      
+      <button class="hamburger-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" style="display:none;">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:(949) 932-0334">Call (949) 932-0334</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="hero-label"><span>&#8212;</span> Beauty &amp; Style <span>&#8212;</span></p>
+      <h1>Santa Ana's Premier Med Spa for Radiant Results</h1>
+      <p class="hero-sub">Glow Up Med Spa is a trusted beauty destination in Santa Ana, CA, dedicated to helping clients look and feel their best. With a stellar 4.9-star rating, our skilled team delivers personalized hair and aesthetic services in a welcoming, upscale environment. We're proud to serve the local community with the care and expertise you deserve.</p>
+      <div class="hero-ctas">
+        <a href="tel:(949) 932-0334" class="btn-primary-lg">Book Now</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  
+  <section class="stats reveal">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value" data-target="4.9" data-suffix=" &#9733;">0</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" data-target="54" data-suffix="+">0</div>
+          <div class="stat-label">Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" data-target="5" data-suffix=" Star">0</div>
+          <div class="stat-label">Service</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" data-target="100" data-suffix="%">0</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Services -->
+  <section id="services" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Expert beauty services tailored to bring out your best look.</p>
+      </div>
+      <div class="services-grid">
+        
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Haircuts & Styling</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Color & Highlights</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Blowouts & Smoothing Treatments</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Hair Extensions</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Scalp Treatments</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+
+      <div style="background:hsl(0 0% 9%);border:1px solid hsl(0 0% 14%);border-radius:0.75rem;padding:2rem;transition:border-color 0.2s;" onmouseover="this.style.borderColor='hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.4)'" onmouseout="this.style.borderColor='hsl(0 0% 14%)'">
+        <div style="width:48px;height:48px;border-radius:0.75rem;background:hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.1);border:1px solid hsla(var(--primary-h),var(--primary-s),var(--primary-l),0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--primary);"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+        <h3 style="font-size:1rem;font-weight:800;color:hsl(0 0% 95%);margin-bottom:0.5rem;">Brow & Lash Services</h3>
+        <p style="font-size:0.875rem;color:hsl(0 0% 55%);line-height:1.6;margin:0;">Professional quality service tailored to your needs.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  
+  <section id="about" class="section reveal" style="border-top: 1px solid hsl(0 0% 12%);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Plan Your Visit</div>
+        <h2 class="section-title">Hours &amp; Location</h2>
+      </div>
+      <div class="hours-grid">
+        <div class="hours-card">
+          <h3>Business Hours</h3>
+          <table style="width:100%;border-collapse:collapse;">
+      <tbody>
+        <tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Monday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">Closed</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Tuesday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">10:00 AM – 6:30 PM</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Wednesday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">10:00 AM – 6:30 PM</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Thursday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">10:00 AM – 6:30 PM</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Friday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">10:00 AM – 6:30 PM</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Saturday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">10:00 AM – 3:00 PM</td></tr>
+<tr style="border-bottom:1px solid hsl(0 0% 14%);"><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 75%);font-weight:600;">Sunday</td><td style="padding:0.75rem 0;font-size:0.875rem;color:hsl(0 0% 55%);text-align:right;">Closed</td></tr>
+      </tbody>
+    </table>
+        </div>
+        <div class="hours-card">
+          <h3>Get In Touch</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="contact-label">Address</div>
+                <div class="contact-value"><a href="https://www.google.com/maps/search/?api=1&query=1951 E Dyer Rd unit d, Santa Ana, CA 92705, USA" target="_blank" rel="noopener">1951 E Dyer Rd unit d, Santa Ana, CA 92705, USA</a></div>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value"><a href="tel:(949) 932-0334">(949) 932-0334</a></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- CTA -->
+  <section id="contact" class="cta-section reveal">
+    <div class="container">
+      <h2>Ready for a Fresh Look?</h2>
+      <p>Book your appointment today and glow up.</p>
+      <a href="tel:(949) 932-0334" class="btn-primary-lg">Call (949) 932-0334</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Glow Up Med Spa</div>
+          <p class="footer-tagline">Your destination for exceptional beauty services. We look forward to welcoming you.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><a href="https://www.google.com/maps/search/?api=1&query=1951 E Dyer Rd unit d, Santa Ana, CA 92705, USA" target="_blank" rel="noopener">1951 E Dyer Rd unit d, Santa Ana, CA 92705, USA</a></li>
+            <li><a href="tel:(949) 932-0334">(949) 932-0334</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">&copy; 2026 Glow Up Med Spa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      var menu = document.getElementById('mobile-menu');
+      var expanded = menu.style.display === 'flex';
+      menu.style.display = expanded ? 'none' : 'flex';
+      this.setAttribute('aria-expanded', !expanded);
+    });
+
+    // Scroll reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+    // Count-up
+    function countUp(el) {
+      var target = parseFloat(el.dataset.target);
+      var duration = 2000;
+      var start = performance.now();
+      function update(now) {
+        var progress = Math.min((now - start) / duration, 1);
+        var value = progress * target;
+        el.textContent = (el.dataset.prefix || '') + (Number.isInteger(target) ? Math.floor(value) : value.toFixed(1)) + (el.dataset.suffix || '');
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+    var countObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting && !e.target.dataset.counted) { e.target.dataset.counted = '1'; countUp(e.target); }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(function(el) { countObserver.observe(el); });
+  </script>
+
+</body>
+</html>
